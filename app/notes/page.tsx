@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Notes(){return <div className="inner-page"><span className="section-index">04 / NOTES</span><h1 className="page-title">Thinking out<br/><em>loud.</em></h1><p className="lead narrow">Notes on product design, AI, building in public and lessons from experiments.</p><div className="empty-lab"><span>✎</span><h2>Notes are on the way.</h2><p>This space will hold practical reflections and ideas from the work.</p><Link href="/work" className="under-link">EXPLORE PROJECTS ↗</Link></div></div>}

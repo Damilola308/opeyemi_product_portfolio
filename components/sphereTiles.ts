@@ -1,4 +1,4 @@
-export type Tile = { transform: string; bg: string; fg: string; label: string; i: number };
+export type Tile = { transform: string; bg: string; fg: string; label: string; i: number; w: number; k: number | null };
 
 const PALETTE: [string, string][] = [
   ['#6a2cff', '#ffffff'], ['#ff6a1a', '#1d0b33'], ['#1d6bff', '#ffffff'], ['#ff4f93', '#ffffff'],
@@ -8,6 +8,8 @@ const PALETTE: [string, string][] = [
 const ICONS = ['✳', '✦', '?', '→', '✓', '◎', '+', '♥', '★', '✿', '↗', '◐'];
 // words centred on the front of the sphere, keyed by latitude (degrees)
 const WORDS: Record<number, string> = { 15: 'THE', 0: 'CURIOUS', [-15]: 'LAB' };
+// position of each word in the "typing" order (THE, CURIOUS, LAB)
+const WORD_START: Record<string, number> = { THE: 0, CURIOUS: 3, LAB: 10 };
 
 export const SPHERE_RADIUS = 210;
 const STEP = 15;
@@ -35,18 +37,22 @@ export function buildTiles(): Tile[] {
       const theta = k * step;
       // signed index from the front (theta 0), so a word sits centred on it
       const signed = k <= n / 2 ? k : k - n;
+      let key: number | null = null;
       let label = ICONS[Math.floor(rand() * ICONS.length)];
       let [bg, fg] = PALETTE[Math.floor(rand() * PALETTE.length)];
       if (word) {
         const idx = signed + (word.length - 1) / 2;
         if (Number.isInteger(idx) && idx >= 0 && idx < word.length) {
           label = word[idx];
+          key = WORD_START[word] + idx;
           [bg, fg] = PALETTE[(idx + (lat === 0 ? 0 : 3)) % 4];
         }
       }
       tiles.push({
         transform: `rotateY(${theta.toFixed(2)}deg) rotateX(${lat}deg) translateZ(${SPHERE_RADIUS}px)`,
-        bg, fg, label, i: i++,
+        bg, fg, label, i: i++, k: key,
+        // 0..4 phase so the idle bobbing rolls across the sphere like a wave
+        w: Number((((theta / 360) * 3) + ((lat + 75) / 150) * 2).toFixed(2)),
       });
     }
   }

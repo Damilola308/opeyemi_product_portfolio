@@ -16,7 +16,7 @@ export default function ProjectCard({ project, index = 0, featured = false }: { 
     >
       <Link href={`/projects/${project.slug}`} className={`project-card ${project.accent}`}>
         <div className="project-art image-art">
-          <img src={`/projects/${project.slug}/hero.png`} alt={`${project.name} project overview`} />
+          <img src={`/projects/${project.slug}/hero.webp`} alt={`${project.name} project overview`} />
           <span className="art-index">{project.number}</span>
         </div>
         <div className="project-info">

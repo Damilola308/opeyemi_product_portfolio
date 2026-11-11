@@ -1,4 +1,4 @@
-export type Project = { slug:string; number:string; name:string; type:'BUILT'|'DESIGNED'|'EXPERIMENT'; summary:string; description:string; role:string; tools:string[]; accent:string; details:string[]; screens:string[]; disclaimer:string; };
+export type Project = { slug:string; number:string; name:string; type:'BUILT'|'DESIGNED'|'EXPERIMENT'; summary:string; description:string; role:string; tools:string[]; accent:string; details:string[]; screens:string[]; disclaimer:string; snapshot?:{problem:string;solution:string}; };
 
 export const projects: Project[] = [
   {
@@ -6,7 +6,7 @@ export const projects: Project[] = [
     "number": "01",
     "name": "Pawluck",
     "type": "DESIGNED",
-    "summary": "A two-sided concept connecting dog owners with safe, time-sensitive party leftovers.",
+    "summary": "Leftover party food, matched with dogs that need it.",
     "description": "A mobile product concept exploring how surplus food from events could be redirected to dog owners and rescuers, with safety guidance built into the experience.",
     "role": "Product concept and UI/UX design",
     "tools": [
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     "number": "02",
     "name": "Ona",
     "type": "DESIGNED",
-    "summary": "A local-knowledge navigation concept built around asking people, not just following a map.",
+    "summary": "Navigation built on asking locals, not just following a map.",
     "description": "A social messaging concept for getting around Lagos, Abuja and Oyo through local directions, voice notes, landmark photos and destination confirmation.",
     "role": "Product concept and UI/UX design",
     "tools": [
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     "number": "03",
     "name": "Ajo",
     "type": "DESIGNED",
-    "summary": "A transparent digital credit concept for people with thin or limited formal credit histories.",
+    "summary": "Credit for people the banks can't see.",
     "description": "A mobile credit product concept that explores how everyday financial activity could help people understand credit eligibility and loan terms.",
     "role": "Product concept and UI/UX design",
     "tools": [
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     "number": "04",
     "name": "Hallchop",
     "type": "DESIGNED",
-    "summary": "A campus food-delivery concept designed around halls, cafeterias and group orders.",
+    "summary": "Group-order campus food, delivered to your hall.",
     "description": "A mobile delivery concept bringing campus cafeterias into one place and supporting delivery or handoff to students in University of Ibadan halls.",
     "role": "Product concept and UI/UX design",
     "tools": [
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     "number": "05",
     "name": "Cura HMO",
     "type": "DESIGNED",
-    "summary": "A desktop HMO operations concept for claims, provider performance and risk review.",
+    "summary": "One dashboard for HMO claims, providers and risk.",
     "description": "A desktop web-console concept for helping Nigerian HMOs review claims, monitor provider networks and surface potential risk patterns.",
     "role": "Product concept and UI/UX design",
     "tools": [
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     "number": "06",
     "name": "Rapada",
     "type": "DESIGNED",
-    "summary": "A move-out marketplace concept for University of Ibadan halls: give, swap or sell what you no longer need.",
+    "summary": "Don't abandon it at move-out. Hand it on.",
     "description": "A mobile app concept that helps University of Ibadan hall residents give away, swap or sell items to the next resident. The name comes from the Yoruba irapada, meaning redemption: every item gets a second chance, and the hall community builds a small circular economy.",
     "role": "Product concept and UI/UX design",
     "tools": [
@@ -172,6 +172,10 @@ export const projects: Project[] = [
       "Handover pass",
       "Post items"
     ],
-    "disclaimer": "Design concept, not affiliated with the University of Ibadan. Names, counts and prices are illustrative. Research beyond my own experience as a UI student is assumed (hypotheses), not measured."
+    "disclaimer": "Design concept, not affiliated with the University of Ibadan. Names, counts and prices are illustrative. Research beyond my own experience as a UI student is assumed (hypotheses), not measured.",
+    "snapshot": {
+      "problem": "Move-out leftovers get abandoned, or buried in hall WhatsApp groups.",
+      "solution": "A hall-first app to give, swap or sell, with a safe handover."
+    }
   }
 ];

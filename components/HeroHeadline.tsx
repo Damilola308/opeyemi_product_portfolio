@@ -19,6 +19,7 @@ export default function HeroHeadline() {
               className={`word ${w.c ?? ''}`}
               initial={reduce ? false : { y: '115%', rotate: 3 }}
               animate={{ y: 0, rotate: 0 }}
+              whileHover={reduce ? undefined : { rotate: w.c ? -3 : -1.5, scale: 1.05 }}
               transition={{ duration: 0.95, delay: 0.2 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
             >
               {w.t}

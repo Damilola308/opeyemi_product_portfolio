@@ -3,14 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { profile } from '@/data/profile';
-import { Home, UserRound, Layers3, FlaskConical, NotebookText, Mail, ArrowUpRight } from 'lucide-react';
+import { Home, UserRound, Layers3, Mail, ArrowUpRight } from 'lucide-react';
 
 const links = [
   { href: '/', label: 'HOME', icon: Home },
   { href: '/about', label: 'ABOUT', icon: UserRound },
   { href: '/work', label: 'WORK', icon: Layers3 },
-  { href: '/experiments', label: 'EXPERIMENTS', icon: FlaskConical },
-  { href: '/notes', label: 'NOTES', icon: NotebookText },
   { href: '/contact', label: 'CONTACT', icon: Mail },
 ];
 

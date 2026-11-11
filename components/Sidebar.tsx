@@ -28,7 +28,7 @@ export default function Sidebar() {
         })}
       </nav>
       <div className="side-bottom">
-        <div className="status-card"><span className="status-light" /> <small>STATUS</small><strong>Building cool things with AI.</strong><small>LOCATION</small><strong>Lagos, Nigeria</strong></div>
+        <div className="status-card"><span className="status-light" /> <small>STATUS</small><strong>Building cool things with AI.</strong><small>LOCATION</small><strong>{profile.location}</strong></div>
         <div className="side-note">Building in public.<br />Sharing what I learn.</div>
         {profile.socials.linkedin
           ? <a className="side-social" href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer">CONNECT ON LINKEDIN <ArrowUpRight size={14}/></a>

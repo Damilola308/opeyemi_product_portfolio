@@ -5,7 +5,8 @@ export const profile = {
   headline: 'I turn curiosity into intelligent experiences.',
   supporting:
     'Exploring the intersection of AI, product thinking and technology. I design ideas, build experiments and create useful digital experiences.',
-  location: 'Lagos, Nigeria',
+  location: 'Ibadan & Lagos, Nigeria',
+  locationLine: 'Shuttling between Ibadan and Lagos',
   // Fill these in. Any field left empty is hidden from the site automatically.
   email: 'opeyemiogunbona06@gmail.com',
   socials: {

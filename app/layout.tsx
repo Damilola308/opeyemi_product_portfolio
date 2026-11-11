@@ -8,8 +8,8 @@ const sans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--f-sans', displ
 const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--f-serif', display: 'swap' });
 
 const siteUrl = 'https://opeyemiproductportfolio.vercel.app';
-const siteTitle = 'Opeyemi Ogunbona — AI Product Designer in Lagos';
-const siteDescription = 'AI Product Designer and vibe builder in Lagos. I design product concepts in Figma and build working prototypes with AI. See the work.';
+const siteTitle = 'Opeyemi Ogunbona — AI Product Designer in Lagos & Ibadan';
+const siteDescription = 'AI Product Designer and vibe builder shuttling between Ibadan and Lagos. I design product concepts in Figma and build working prototypes with AI. See the work.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

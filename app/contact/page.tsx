@@ -16,6 +16,6 @@ export default function Contact() {
     {email && <a className="contact-email" href={`mailto:${email}`}><Mail /> {email} <ArrowUpRight /></a>}
     <div className="contact-links"><LinkedInButton /></div>
     {links.length > 0 && <div className="contact-links">{links.map(l => <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className="button-outline">{l.label} <ArrowUpRight size={15} /></a>)}</div>}
-    <p className="small-note">Based in {profile.location}. Working with teams and founders worldwide.</p>
+    <p className="small-note">{profile.locationLine}.</p>
   </div>;
 }

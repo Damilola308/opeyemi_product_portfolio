@@ -9,7 +9,7 @@ export default function KeycapSphere() {
   const tiles = useMemo(buildTiles, []);
   const ref = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; moved: boolean } | null>(null);
-  const timer = useRef<ReturnType<typeof setTimeout>>();
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const [burst, setBurst] = useState(false);
   const px = useMotionValue(0);
   const py = useMotionValue(0);
